@@ -1,0 +1,51 @@
+header {
+    color: green;
+    border: solid;
+    margin: 10px;
+}
+
+header h1 {
+    margin-left:20%;
+    background-color: blue;
+    margin-right:25%;
+    padding: 2%;
+}
+
+
+.division {
+    color: pink;
+    background-color: red;
+    text-align: center;
+    display: flex;
+    
+}
+
+.division #info {
+    float: left;
+    width: 50%;
+    background-color: blueviolet;
+    padding-bottom: 30%;
+
+}
+
+#photo {
+
+    width: 50%;
+
+    background-color: yellow;
+    
+}
+
+#photo img{
+    margin: 20%;
+    width: 50%;
+}
+
+#headline1 {
+    color: yellow;
+}
+
+span {
+    background-color: green;
+    display: block;
+}
