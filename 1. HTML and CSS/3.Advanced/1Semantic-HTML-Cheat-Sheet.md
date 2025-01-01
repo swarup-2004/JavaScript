@@ -1,130 +1,297 @@
-```markdown
-# HTML `<meta>` Tags Cheat Sheet
+### Semantic HTML Cheat Sheet
 
-Meta tags allow you to convey information to search engines, control browser behavior, and improve SEO. Below is a cheat sheet to help you use meta tags effectively.
-
----
-
-## General Structure of a `<meta>` Tag
-
-```html
-<meta name="property" content="value">
-```
-
-### Attributes:
-- **Name**: The name of the property. For example:
-  ```html
-  <meta name="author" content="John Doe">
-  ```
-- **Content**: Specifies the property's value. For example:
-  ```html
-  <meta name="language" content="english">
-  ```
-- **Charset**: Defines the character encoding used by the page. Example:
-  ```html
-  <meta charset="UTF-8">
-  ```
-- **HTTP-equiv**: Simulates HTTP response headers. Example:
-  ```html
-  <meta http-equiv="refresh" content="30">
-  ```
+Semantic HTML tags help describe the meaning of your HTML documents. Below is a cheat sheet of some of the most commonly used tags for structuring, content, inline text, embedded content, and tables.
 
 ---
 
-## Basic Meta Tags (For SEO)
+### **Sectioning Tags**
+Use these tags to organize your HTML document into structured sections.
 
-- `<meta name="description" content="A brief description of the web page">`  
-  Provides a brief description of the web page.
-
-- `<meta name="title" content="Page Title">`  
-  Specifies the title of the web page.
-
-- `<meta name="author" content="John Doe">`  
-  Specifies the author of the web page.
-
-- `<meta name="language" content="english">`  
-  Specifies the language of the web page.
-
-- `<meta name="robots" content="index,follow">`  
-  Tells search engines how to crawl or index the page.
-
-- `<meta name="google" content="nositelinkssearchbox">`  
-  Tells Google not to display the sitelinks search box for your page.
-
-- `<meta name="googlebot" content="notranslate">`  
-  Tells Google not to provide automatic translations for your page.
-
-- `<meta name="revised" content="Sunday, July 18th, 2010, 5:15 pm">`  
-  Specifies the last modified date and time.
-
-- `<meta name="rating" content="safe for kids">`  
-  Specifies the expected audience for your page.
-
-- `<meta name="copyright" content="Copyright 2022">`  
-  Specifies the copyright notice.
+- **`<header>`**: Defines the header of a content section or webpage. Typically contains website branding or logos.
+- **`<nav>`**: Specifies the navigation links of a section or webpage.
+- **`<footer>`**: Defines the footer of a content section or webpage. Often contains secondary links, copyright notices, privacy policy links, etc.
+- **`<main>`**: Indicates the main content of a section or webpage.
+- **`<aside>`**: Contains secondary content, not essential to understanding the main content.
+- **`<article>`**: Represents an independent, self-contained block of content, like a blog post or product.
+- **`<section>`**: Defines a standalone section of the document, often used within `<body>` or `<article>`.
+- **`<details>`**: Creates a collapsible section of content.
+- **`<summary>`**: Specifies the summary or caption for a `<details>` element.
+- **`<h1>` - `<h6>`**: Defines headings, where `<h1>` is the most important and `<h6>` is the least.
 
 ---
 
-## `<meta http-equiv="..."/>` Tags
+### **Content Tags**
+These tags define various types of content within your HTML document.
 
-- `<meta http-equiv="content-type" content="text/html">`  
-  Specifies the format of the document returned by the server.
-
-- `<meta http-equiv="default-style" content="style.css">`  
-  Specifies the default styling document.
-
-- `<meta http-equiv="refresh" content="30">`  
-  Specifies the duration before the page refreshes or is considered stale.
-
-- `<meta http-equiv="Content-language" content="en">`  
-  Specifies the language of the page.
-
-- `<meta http-equiv="Cache-Control" content="no-cache">`  
-  Instructs the browser how to cache your page.
-
----
-
-## Responsive Design / Mobile Meta Tags
-
-- `<meta name="format-detection" content="telephone=yes">`  
-  Indicates that telephone numbers should appear as clickable links for phone calls.
-
-- `<meta name="HandheldFriendly" content="true">`  
-  Specifies that the page is optimized for mobile devices.
-
-- `<meta name="viewport" content="width=device-width, initial-scale=1.0">`  
-  Specifies the viewport area for responsive web design.
+- **`<blockquote>`**: Used for long quotations.
+- **`<dl>`**: Defines a description list.
+  - **`<dt>`**: Represents a term in the list.
+  - **`<dd>`**: Describes the term.
+- **`<figcaption>`**: Provides a caption for an image or figure.
+- **`<figure>`**: Represents self-contained content, such as an image with a caption.
+- **`<hr>`**: Adds a horizontal line to separate content.
+- **`<li>`**: Defines an item in a list.
+- **`<menu>`**: A semantic alternative to `<ul>`.
+- **`<ol>`**: Defines an ordered (numbered) list.
+- **`<p>`**: Represents a paragraph.
+- **`<pre>`**: Displays preformatted text, typically rendered in a monospace font.
+- **`<ul>`**: Defines an unordered (bulleted) list.
 
 ---
 
-## Charset Meta Tag
+### **Inline Tags**
+Inline tags apply styling or functionality to text without breaking the flow.
 
-- `<meta charset="UTF-8">`  
-  Specifies the character encoding for the page. Most commonly used is `UTF-8`.
-
----
-
-## Example Usage
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is a sample page">
-    <meta name="author" content="John Doe">
-    <meta name="robots" content="index,follow">
-    <meta http-equiv="refresh" content="30">
-    <title>Meta Tag Cheat Sheet</title>
-</head>
-<body>
-    <h1>Welcome to the Meta Tags Cheat Sheet</h1>
-</body>
-</html>
-```
+- **`<a>`**: Defines an anchor link.
+- **`<abbr>`**: Specifies an abbreviation or acronym.
+- **`<b>`**: Bold text (use `<strong>` for emphasis).
+- **`<br>`**: Inserts a line break.
+- **`<cite>`**: Represents the title of a creative work.
+- **`<code>`**: Denotes a block of computer code.
+- **`<data>`**: Provides machine-readable data.
+- **`<em>`**: Emphasizes text.
+- **`<i>`**: Italicizes text (for idiomatic or technical terms).
+- **`<mark>`**: Highlights text.
+- **`<q>`**: Represents short quotations.
+- **`<s>`**: Adds a strikethrough to text.
+- **`<samp>`**: Displays sample text.
+- **`<small>`**: Denotes smaller or secondary text.
+- **`<span>`**: A generic container for applying styles.
+- **`<strong>`**: Bold text (indicates importance).
+- **`<sub>`**: Subscript text.
+- **`<sup>`**: Superscript text.
+- **`<time>`**: Represents time or date.
+- **`<u>`**: Underlines text.
+- **`<var>`**: Represents a variable in programming or math.
 
 ---
 
-Keep this cheat sheet handy while building your web applications!
-```
+### **Embedded Content and Media Tags**
+These tags are used to include media and graphics in your webpage.
+
+- **`<audio>`**: Embeds audio files.
+- **`<canvas>`**: Renders 2D or 3D graphics.
+- **`<embed>`**: Embeds external content (e.g., media players).
+- **`<iframe>`**: Embeds another webpage within the current page.
+- **`<img>`**: Embeds an image.
+- **`<object>`**: Similar to `<embed>`, but uses browser plug-ins.
+- **`<picture>`**: Contains `<img>` and `<source>` for responsive images.
+- **`<video>`**: Embeds a video.
+- **`<source>`**: Specifies media resources for `<audio>`, `<video>`, or `<picture>`.
+- **`<svg>`**: Defines Scalable Vector Graphics (SVG) for vector images.
+
+---
+
+### **Table Tags**
+These tags are used to define and style tables.
+
+- **`<table>`**: Creates a table element.
+- **`<thead>`**: Groups header rows, usually containing `<th>`.
+- **`<tbody>`**: Contains the main table content (rows with `<td>` elements).
+- **`<tfoot>`**: Groups footer rows.
+- **`<tr>`**: Defines a table row.
+- **`<td>`**: Defines a cell in a row.
+- **`<th>`**: Defines a header cell in a row.
+- **`<caption>`**: Adds a caption to the table.
+- **`<colgroup>`**: Groups columns for styling.
+- **`<col>`**: Defines a single column within `<colgroup>`.
+
+---
+### Semantic HTML Cheat Sheet
+
+Semantic HTML tags help describe the meaning of your HTML documents. Below is a cheat sheet of some of the most commonly used tags for structuring, content, inline text, embedded content, and tables.
+
+---
+
+### **Sectioning Tags**
+Use these tags to organize your HTML document into structured sections.
+
+- **`<header>`**: Defines the header of a content section or webpage. Typically contains website branding or logos.
+- **`<nav>`**: Specifies the navigation links of a section or webpage.
+- **`<footer>`**: Defines the footer of a content section or webpage. Often contains secondary links, copyright notices, privacy policy links, etc.
+- **`<main>`**: Indicates the main content of a section or webpage.
+- **`<aside>`**: Contains secondary content, not essential to understanding the main content.
+- **`<article>`**: Represents an independent, self-contained block of content, like a blog post or product.
+- **`<section>`**: Defines a standalone section of the document, often used within `<body>` or `<article>`.
+- **`<details>`**: Creates a collapsible section of content.
+- **`<summary>`**: Specifies the summary or caption for a `<details>` element.
+- **`<h1>` - `<h6>`**: Defines headings, where `<h1>` is the most important and `<h6>` is the least.
+
+---
+
+### **Content Tags**
+These tags define various types of content within your HTML document.
+
+- **`<blockquote>`**: Used for long quotations.
+- **`<dl>`**: Defines a description list.
+  - **`<dt>`**: Represents a term in the list.
+  - **`<dd>`**: Describes the term.
+- **`<figcaption>`**: Provides a caption for an image or figure.
+- **`<figure>`**: Represents self-contained content, such as an image with a caption.
+- **`<hr>`**: Adds a horizontal line to separate content.
+- **`<li>`**: Defines an item in a list.
+- **`<menu>`**: A semantic alternative to `<ul>`.
+- **`<ol>`**: Defines an ordered (numbered) list.
+- **`<p>`**: Represents a paragraph.
+- **`<pre>`**: Displays preformatted text, typically rendered in a monospace font.
+- **`<ul>`**: Defines an unordered (bulleted) list.
+
+---
+
+### **Inline Tags**
+Inline tags apply styling or functionality to text without breaking the flow.
+
+- **`<a>`**: Defines an anchor link.
+- **`<abbr>`**: Specifies an abbreviation or acronym.
+- **`<b>`**: Bold text (use `<strong>` for emphasis).
+- **`<br>`**: Inserts a line break.
+- **`<cite>`**: Represents the title of a creative work.
+- **`<code>`**: Denotes a block of computer code.
+- **`<data>`**: Provides machine-readable data.
+- **`<em>`**: Emphasizes text.
+- **`<i>`**: Italicizes text (for idiomatic or technical terms).
+- **`<mark>`**: Highlights text.
+- **`<q>`**: Represents short quotations.
+- **`<s>`**: Adds a strikethrough to text.
+- **`<samp>`**: Displays sample text.
+- **`<small>`**: Denotes smaller or secondary text.
+- **`<span>`**: A generic container for applying styles.
+- **`<strong>`**: Bold text (indicates importance).
+- **`<sub>`**: Subscript text.
+- **`<sup>`**: Superscript text.
+- **`<time>`**: Represents time or date.
+- **`<u>`**: Underlines text.
+- **`<var>`**: Represents a variable in programming or math.
+
+---
+
+### **Embedded Content and Media Tags**
+These tags are used to include media and graphics in your webpage.
+
+- **`<audio>`**: Embeds audio files.
+- **`<canvas>`**: Renders 2D or 3D graphics.
+- **`<embed>`**: Embeds external content (e.g., media players).
+- **`<iframe>`**: Embeds another webpage within the current page.
+- **`<img>`**: Embeds an image.
+- **`<object>`**: Similar to `<embed>`, but uses browser plug-ins.
+- **`<picture>`**: Contains `<img>` and `<source>` for responsive images.
+- **`<video>`**: Embeds a video.
+- **`<source>`**: Specifies media resources for `<audio>`, `<video>`, or `<picture>`.
+- **`<svg>`**: Defines Scalable Vector Graphics (SVG) for vector images.
+
+---
+
+### **Table Tags**
+These tags are used to define and style tables.
+
+- **`<table>`**: Creates a table element.
+- **`<thead>`**: Groups header rows, usually containing `<th>`.
+- **`<tbody>`**: Contains the main table content (rows with `<td>` elements).
+- **`<tfoot>`**: Groups footer rows.
+- **`<tr>`**: Defines a table row.
+- **`<td>`**: Defines a cell in a row.
+- **`<th>`**: Defines a header cell in a row.
+- **`<caption>`**: Adds a caption to the table.
+- **`<colgroup>`**: Groups columns for styling.
+- **`<col>`**: Defines a single column within `<colgroup>`.
+
+---
+### Semantic HTML Cheat Sheet
+
+Semantic HTML tags help describe the meaning of your HTML documents. Below is a cheat sheet of some of the most commonly used tags for structuring, content, inline text, embedded content, and tables.
+
+---
+
+### **Sectioning Tags**
+Use these tags to organize your HTML document into structured sections.
+
+- **`<header>`**: Defines the header of a content section or webpage. Typically contains website branding or logos.
+- **`<nav>`**: Specifies the navigation links of a section or webpage.
+- **`<footer>`**: Defines the footer of a content section or webpage. Often contains secondary links, copyright notices, privacy policy links, etc.
+- **`<main>`**: Indicates the main content of a section or webpage.
+- **`<aside>`**: Contains secondary content, not essential to understanding the main content.
+- **`<article>`**: Represents an independent, self-contained block of content, like a blog post or product.
+- **`<section>`**: Defines a standalone section of the document, often used within `<body>` or `<article>`.
+- **`<details>`**: Creates a collapsible section of content.
+- **`<summary>`**: Specifies the summary or caption for a `<details>` element.
+- **`<h1>` - `<h6>`**: Defines headings, where `<h1>` is the most important and `<h6>` is the least.
+
+---
+
+### **Content Tags**
+These tags define various types of content within your HTML document.
+
+- **`<blockquote>`**: Used for long quotations.
+- **`<dl>`**: Defines a description list.
+  - **`<dt>`**: Represents a term in the list.
+  - **`<dd>`**: Describes the term.
+- **`<figcaption>`**: Provides a caption for an image or figure.
+- **`<figure>`**: Represents self-contained content, such as an image with a caption.
+- **`<hr>`**: Adds a horizontal line to separate content.
+- **`<li>`**: Defines an item in a list.
+- **`<menu>`**: A semantic alternative to `<ul>`.
+- **`<ol>`**: Defines an ordered (numbered) list.
+- **`<p>`**: Represents a paragraph.
+- **`<pre>`**: Displays preformatted text, typically rendered in a monospace font.
+- **`<ul>`**: Defines an unordered (bulleted) list.
+
+---
+
+### **Inline Tags**
+Inline tags apply styling or functionality to text without breaking the flow.
+
+- **`<a>`**: Defines an anchor link.
+- **`<abbr>`**: Specifies an abbreviation or acronym.
+- **`<b>`**: Bold text (use `<strong>` for emphasis).
+- **`<br>`**: Inserts a line break.
+- **`<cite>`**: Represents the title of a creative work.
+- **`<code>`**: Denotes a block of computer code.
+- **`<data>`**: Provides machine-readable data.
+- **`<em>`**: Emphasizes text.
+- **`<i>`**: Italicizes text (for idiomatic or technical terms).
+- **`<mark>`**: Highlights text.
+- **`<q>`**: Represents short quotations.
+- **`<s>`**: Adds a strikethrough to text.
+- **`<samp>`**: Displays sample text.
+- **`<small>`**: Denotes smaller or secondary text.
+- **`<span>`**: A generic container for applying styles.
+- **`<strong>`**: Bold text (indicates importance).
+- **`<sub>`**: Subscript text.
+- **`<sup>`**: Superscript text.
+- **`<time>`**: Represents time or date.
+- **`<u>`**: Underlines text.
+- **`<var>`**: Represents a variable in programming or math.
+
+---
+
+### **Embedded Content and Media Tags**
+These tags are used to include media and graphics in your webpage.
+
+- **`<audio>`**: Embeds audio files.
+- **`<canvas>`**: Renders 2D or 3D graphics.
+- **`<embed>`**: Embeds external content (e.g., media players).
+- **`<iframe>`**: Embeds another webpage within the current page.
+- **`<img>`**: Embeds an image.
+- **`<object>`**: Similar to `<embed>`, but uses browser plug-ins.
+- **`<picture>`**: Contains `<img>` and `<source>` for responsive images.
+- **`<video>`**: Embeds a video.
+- **`<source>`**: Specifies media resources for `<audio>`, `<video>`, or `<picture>`.
+- **`<svg>`**: Defines Scalable Vector Graphics (SVG) for vector images.
+
+---
+
+### **Table Tags**
+These tags are used to define and style tables.
+
+- **`<table>`**: Creates a table element.
+- **`<thead>`**: Groups header rows, usually containing `<th>`.
+- **`<tbody>`**: Contains the main table content (rows with `<td>` elements).
+- **`<tfoot>`**: Groups footer rows.
+- **`<tr>`**: Defines a table row.
+- **`<td>`**: Defines a cell in a row.
+- **`<th>`**: Defines a header cell in a row.
+- **`<caption>`**: Adds a caption to the table.
+- **`<colgroup>`**: Groups columns for styling.
+- **`<col>`**: Defines a single column within `<colgroup>`.
+
+---
