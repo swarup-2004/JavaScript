@@ -64,4 +64,4 @@ Meta tags are used to provide metadata about an HTML document. This metadata can
 | `<meta charset="UTF-8"/>`             | Specifies the character encoding for the page. Most commonly used is `UTF-8`.       |
 
 ---
-
+```
