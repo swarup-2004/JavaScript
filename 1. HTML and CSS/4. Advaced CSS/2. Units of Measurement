@@ -1,0 +1,48 @@
+# CSS Units of Measurement
+
+A web page is two-dimensional, meaning it has width and height. There are multiple ways to express these dimensions, such as vertical and horizontal, length and breadth, or x and y axes. Web page sizes can be static or dynamic, and CSS provides different units of measurement to define these properties.
+
+CSS units can be broadly categorized into **Absolute** and **Relative** units.
+
+## Absolute Units
+Absolute units have a fixed size and remain constant across different devices. They are useful for print layouts but not ideal for responsive web design due to varying screen sizes.
+
+| Unit | Name                | Comparison               |
+|------|---------------------|--------------------------|
+| Q    | Quarter-millimeters | 1Q = 1/40th of 1cm      |
+| mm   | Millimeters         | 1mm = 1/10th of 1cm     |
+| cm   | Centimeters         | 1cm = 37.8px = 25.2/64in |
+| in   | Inches             | 1in = 2.54cm = 96px     |
+| pc   | Picas              | 1pc = 1/6th of 1in      |
+| pt   | Points             | 1pt = 1/72nd of 1in     |
+| px   | Pixels             | 1px = 1/96th of 1in     |
+
+Among these, **pixels (px) and centimeters (cm)** are most frequently used.
+
+## Relative Units
+Relative units define values in relation to other elements within the parent container or viewport. These are preferred for responsive designs.
+
+| Unit  | Description |
+|-------|------------|
+| em    | Font size of the parent element. |
+| ex    | x-height (height of lowercase letters) of the font. |
+| ch    | Width of the "0" character in the font. |
+| rem   | Font size of the root element. |
+| lh    | Computed line height of the parent element. |
+| rlh   | Computed line height of the root `<html>` element. |
+| vw    | 1% of the viewport width. |
+| vh    | 1% of the viewport height. |
+| vmin  | 1% of the smaller viewport dimension. |
+| vmax  | 1% of the larger viewport dimension. |
+| %     | Percentage of the parent element. |
+
+Commonly used relative units include **%, em, rem, vh, and vw**. When dealing with fonts, `em` and `rem` are frequently used, while viewport-based designs rely on `vh` and `vw`.
+
+## Choosing the Right Unit
+Each CSS property may require different units depending on the context. For example:
+- **Font sizes** often use `px`, `em`, or `rem`.
+- **Widths and heights** may use `%`, `vw`, or `vh`.
+- **Color properties** like `background-color` accept values in hexadecimal, `rgb()`, `rgba()`, `hsl()`, and `hsla()`.
+
+Practicing with these units in real-world projects will help in selecting the most appropriate one for different scenarios.
+
